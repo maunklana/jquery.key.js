@@ -20,7 +20,7 @@
                 if (cache[cache.length - 1] === key) return;
                 cache.push(key);
 
-                var lanjut=((!(oninput)) && (!$("input, textarea").is(":focus"))) || (oninput)?true:false;
+                var lanjut=((!(oninput)) && (!$(":input").is(":focus"))) || (oninput)?true:false;
                 if(lanjut){// lanjut mean continue, i not use continue because it Constants
                     i = key === code[i] || ( typeof code === 'string' && key === keys[code.split("+")[i]] ) ? i + 1 : 0;
                     if ( i === code.length || ( typeof code === 'string' && code.split('+').length === i ) ) {
